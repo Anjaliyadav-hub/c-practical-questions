@@ -1,14 +1,12 @@
 # c-practical-questions
 
 <h2> Write a program to swap two numbers using pointers</h2>
+
 #include <iostream>
 using namespace std;
-
-int main()
-{
+int main(){
     int a, b;
     int *p1, *p2;
-
     cout << "Enter two numbers: ";
     cin >> a >> b;
 
