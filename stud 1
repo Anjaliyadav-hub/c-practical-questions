@@ -1,0 +1,46 @@
+<h2>ques-1</h2>
+
+#include <stdio.h>
+
+struct student {
+    int roll_no;
+    char name[50];
+    float marks;
+};
+
+struct employee {
+    int emp_id;
+    char name[50];
+    float basic_salary;
+};
+
+int main() {
+    struct student s[5];
+    int i;
+
+    printf("Enter details of 5 students:\n");
+    for (i = 0; i < 5; i++) {
+        printf("\nStudent %d\n", i + 1);
+        printf("Roll No: ");
+        scanf("%d", &s[i].roll_no);
+
+        printf("Name: ");
+        scanf("%s", s[i].name);
+
+        printf("Marks: ");
+        scanf("%f", &s[i].marks);
+    }
+
+    printf("\nStudents who scored more than 75 marks:\n");
+    for (i = 0; i < 5; i++) {
+        if (s[i].marks > 75) {
+            printf("\nRoll No: %d", s[i].roll_no);
+            printf("\nName: %s", s[i].name);
+            printf("\nMarks: %.2f\n", s[i].marks);
+        }
+    }
+
+    return 0;
+}
+
+
