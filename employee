@@ -1,0 +1,35 @@
+<h2> ques2</h2>
+
+
+#include <stdio.h>
+
+struct employee {
+    int emp_id;
+    char name[50];
+    float basic_salary;
+};
+
+int main() {
+    struct employee e;
+    float hra, da, gross_salary;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &e.emp_id);
+
+    printf("Enter Name: ");
+    scanf("%s", e.name);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &e.basic_salary);
+
+    hra = 0.20 * e.basic_salary;
+    da = 0.10 * e.basic_salary;
+    gross_salary = e.basic_salary + hra + da;
+
+    printf("\nEmployee ID: %d", e.emp_id);
+    printf("\nName: %s", e.name);
+    printf("\nBasic Salary: %.2f", e.basic_salary);
+    printf("\nGross Salary: %.2f", gross_salary);
+
+    return 0;
+}
