@@ -1,0 +1,29 @@
+<h2> question 3</h2>
+
+#include <iostream>
+using namespace std;
+
+// Function to swap using pointers (This is the user-defined function)
+void swapNumbers(int* a, int* b) {
+    int temp;
+    temp = *a;  // Store the value pointed to by 'a'
+    *a = *b;    // Put the value pointed to by 'b' into the location pointed to by 'a'
+    *b = temp;  // Put the stored 'temp' value into the location pointed to by 'b'
+}
+
+int main() {
+    int num1 = 10, num2 = 20;
+
+    cout << "Before Swapping:\n";
+    cout << "num1 = " << num1 << endl;
+    cout << "num2 = " << num2 << endl;
+
+    // Call the user-defined function, passing the addresses (&) of the variables
+    swapNumbers(&num1, &num2);
+
+    cout << "\nAfter Swapping:\n";
+    cout << "num1 = " << num1 << endl;
+    cout << "num2 = " << num2 << endl;
+
+    return 0;
+}
